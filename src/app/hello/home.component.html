@@ -1,0 +1,9 @@
+<div id="redirect-manager">
+  @for (redirect of redirects(); track $index){
+    <div class="redirect" routerLink="{{redirect.routerLinkUrl}}">
+      <h1 class="redirect-header">{{redirect.name}}</h1>
+      <span class="split-line"></span>
+      <p class="redirect-description">{{redirect.desc}}</p>
+    </div>
+  }
+</div>

@@ -1,7 +1,9 @@
 import { Routes } from '@angular/router';
-import { HelloComponent } from './hello/hello.component';
+import { HomeComponent } from './hello/home.component';
+import {SortComponent} from "./sort/sort.component";
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'hello', pathMatch: 'full' },
-  { path: 'hello', component: HelloComponent }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'sort', component: SortComponent}
 ];
