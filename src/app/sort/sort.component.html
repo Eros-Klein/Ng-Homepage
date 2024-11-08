@@ -1,1 +1,33 @@
-<p>sort works!</p>
+<div id="sort-container">
+  <div id="back-button" routerLink="/home">
+    <--
+  </div>
+
+  <div [style.gap]="fullBarMode()?'0.5rem':''" id="result-container">
+    @for (num of arrayToSort(); track $index){
+      @if(!fullBarMode()) {
+        <div
+          [style.background-color]="highlightedFields().includes($index)?'lightgray':furtherHighlightedFields().includes($index)?'midnightblue':'transparent'"
+          [style.color]="highlightedFields().includes($index)?'black':'snow'"
+          class="result">
+          <span [style.height]="num + 5 + 'px'" class="bar"></span>
+          <p>{{ num }}</p>
+        </div>
+      } @else {
+        <div class="bar-result">
+          <span [style.height]="num + 5 + 'px'" class="bar"></span>
+        </div>
+      }
+    }
+  </div>
+  <div id="button-container">
+    <button (click)="startRandomSort()">Random Sort</button>
+    <button (click)="startBubbleSort()">Bubble Sort</button>
+    <div id="regulators">
+      <label for="speed-regulator">Speed Regulation</label>
+      <input id="speed-regulator" type="range" [(ngModel)]="speed">
+    </div>
+    <button (click)="reset()">Reset Array</button>
+    <button [style.background-color]="fullBarMode()?'dodgerblue': 'transparent'" (click)="fullBarMode.set(!fullBarMode()); reset()">Toggle Bar-Mode</button>
+  </div>
+</div>
