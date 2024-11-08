@@ -15,7 +15,7 @@ import {RouterLink} from "@angular/router";
 export class SortComponent {
   sleep = async (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-  arrayToSort = signal<any[]>(this.generateRandomArray(10))
+  arrayToSort = signal<any[]>(this.generateRandomArray(15))
 
   highlightedFields = signal<number[]>([0,1])
 
@@ -67,7 +67,7 @@ export class SortComponent {
     if(this.fullBarMode()) {
       this.arrayToSort.set(this.generateRandomArray(100, 400))
     }
-    else this.arrayToSort.set(this.generateRandomArray(10))
+    else this.arrayToSort.set(this.generateRandomArray(15))
   }
 
   generateRandomArray(len:number, max:number=50){
