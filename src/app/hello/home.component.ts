@@ -18,6 +18,10 @@ export class HomeComponent {
       routerLinkUrl: "/sort",
       name: "Sort Visualisation",
       desc: "A simple visualisation of sorting arrays to understand the different algorithms"
-    }])
+    },/*{
+      routerLinkUrl: "/math",
+      name: "Summary Math",
+      desc: "A summary and a set of examples collected by me for the 1. math exam of school-year 2024/25"
+    }*/])
   }
 }
