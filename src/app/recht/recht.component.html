@@ -1,0 +1,268 @@
+<div class="max-h-screen overflow-y-auto py-10 px-10 flex justify-start items-center flex-col text-white">
+    <div class="fixed top-10 left-[5%] text-4xl cursor-pointer select-none" (click)="prevPage()">
+        ←
+    </div>
+    <div class="fixed top-10 right-[5%] text-4xl cursor-pointer select-none" (click)="nextPage()">
+        →
+    </div>
+    @if(page() === 0){
+    <div id="chapter-1" class="flex flex-col gap-10 justify-start items-start w-full sm:px-60">
+        <h1 class="font-bold text-2xl sm:text-3xl tracking-wider self-center">Rechtsordnung</h1>
+        <span class="w-full h-1 bg-stone-100 rounded-xl"></span>
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">1. Normen</h2>
+            <p>Normen sind Verhaltensregeln die sich aus dem zusammenleben von Menschen bilden. Der Staat kann das einhalten von solchen einfordern.</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">1.1. Rechtsnormen vs Moralische Normen, Sitten</h2>
+            <p><a class="font-semibold">Rechtsnormen</a>: Rechtliche Folgen, staatliche Gewalt</p>
+            <p><a class="font-semibold">Moralische Normen, Sitten</a>: </p>
+            <p class="pl-3 sm:pl-10">Moral = eigenes Gewissen</p>
+            <p class="pl-3 sm:pl-10">Brauch oder Sitte = was ist in einer Gemeinschaft üblich</p>
+            <p class="pl-3 sm:pl-10">!Keine! staatliche Gewalt</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">2. Stufenbau der Rechtsordnung</h2>
+            <p>Rechtsordnung = Gesamtheit aller Rechtsvorschrifen, die in einem Staat gelten</p>
+            <p>Stufenbau der Rechtsordnung:</p>
+            <p class="pl-3 sm:pl-10 font-semibold">1. Leitenden Verfassungsprinzipien</p>
+            <p class="pl-4 sm:pl-16">- Grundlage der Österreichischen Rechtsordnung</p>
+            <p class="pl-4 sm:pl-16">- Demokratisches, Bundesstaatliches, Repubikanisches, Rechtsstaatliches, Gewaltenteilendes Prinzip</p>
+            <p class="pl-4 sm:pl-16">- Abschaffung benötigt Volksabstimmung</p>
+            <p class="pl-4 sm:pl-16">- Bsp.: Bundesverfassungsgesetz, Staatsvertrag</p>
+            <p class="pl-3 sm:pl-10 font-semibold">2. EU-Recht</p>
+            <p class="pl-4 sm:pl-16">- EU vs Österreich => EU-Recht wird angewendet</p>
+            <p class="pl-4 sm:pl-16">- Bsp.: Gründungsverträge, Ergänzungsverträge der EU (Vertrag von Rom, Lissabon, ...)</p>
+            <p class="pl-3 sm:pl-10 font-semibold">3. Bundesverfassungsgesetze/Landesverfassungsgesetze</p>
+            <p class="pl-4 sm:pl-16">- Bsp.: Regeln Aufbau und Struktur</p>
+            <p class="pl-4 sm:pl-16">- Bsp.: Bundesverfassungsgesetz, Landesverfassungsgesetz</p>
+            <p class="pl-3 sm:pl-10 font-semibold">4. Bundesgesetze/Landesgesetze</p>
+            <p class="pl-4 sm:pl-16">- Lebengrundlage für Bürger*innen</p>
+            <p class="pl-4 sm:pl-16">- Bsp.: ABGB, OÖ-Jugenschutzgesetz</p>
+            <p class="pl-3 sm:pl-10 font-semibold">5. Verordnungen</p>
+            <p class="pl-4 sm:pl-16">- Verordnungen können von Verwaltungsorgangen (Bundesminister, Magistrat, Gemeinde) rasch erlassen werden</p>
+            <p class="pl-4 sm:pl-16">- Bsp.: Flächenwidmungsplan, Bebauungsplan, Covid-19-Verordnung</p>
+            <p class="pl-3 sm:pl-10 font-semibold">6. Einzelfallentscheidungen</p>
+            <p class="pl-4 sm:pl-16">- Verwaltungsbehörden oder Gerichte mit staatlichem Zwang</p>
+            <p class="pl-4 sm:pl-16">- Bei: Bescheid, Urteil, Vollstreckung</p>
+            <p class="pl-4 sm:pl-16">- Bsp.: Steuerbescheid, Baubewilligungsbescheid, Freispruch bei Diebstahl, Zwnagsweiße eintreibung von Steuerschulden</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">3. Rechtsanwendung und Rechtsauslegung</h2>
+            <p class="font-bold">Einfaches Schema:</p>
+            <p>Feststellung des Sachverhalts, <a class="font-semibold">Beweisaufnahme</a> und Beweiswürdigung => <a class="font-semibold">Suchen</a> der Norm => Subsumtion(<a class="font-semibold">Prüfung</a> der Norm) => Sanktion (<a class="font-semibold">Feststellung</a> der sich daras ergebenden Rechtsfolge)</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">4. Einteilung und Arten des Rechts</h2>
+            <p>Recht wird in 2 Teile unterteilt</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">4.1. Öffentliches Recht vs Privat- oder Zivilrecht</h2>
+            <table class="table">
+                <tr class="[&>td]:px-2 [&>td]:py-1 [&>td]:border [&>td]:border-white">
+                    <td class="font-semibold">Öffentliches Recht</td>
+                    <td>Regelt das Verhältnis zwischen Staat und Bürger*innen (Unternehmen)</td>
+                    <td>Der Staat ist bevorteilt (außer er tritt als Privatperson auf)</td>
+                    <td>Zwingender Charakter</td>
+                    <td>Verwaltungs-, Straf-, Verfassungs- und Sozialversicherungsrecht</td>
+                </tr>
+                <tr class="[&>td]:px-2 [&>td]:py-1 [&>td]:border [&>td]:border-white">
+                    <td class="font-semibold">Privat- oder Zivilrecht</td>
+                    <td>Regelt das Verhältnis zwischen Bürger*innen (Unternehmen)</td>
+                    <td>Beteiligten sind gleichberechtigt</td>
+                    <td>Zwingender oder Nachgiebieger Charakter</td>
+                    <td>Familien-, Sachen-, Schadenersatz-, Erb-, Urheber- und Vertragsrecht</td>
+                </tr>
+            </table>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">4.2. Arten des Rechts</h2>
+            <h3 class="font-semibold sm:text-lg">1. Objektives Recht</h3>
+            <p class="pl-5">Gesamtheit aller Rechtsvorschriften eines Staates</p>
+            <p class="pl-5">Bsp.: Arbeitsrecht, Familienrecht</p>
+            <h3 class="font-semibold sm:text-lg">2. Subjektives Recht</h3>
+            <p class="pl-5">Recht steht einer bestimmten Rechtsperson zu</p>
+            <p class="pl-5">Bsp.: Eigentumsrecht, Erbrecht</p>
+            <h3 class="font-semibold sm:text-lg">3. Materielles Recht</h3>
+            <p class="pl-5">Regelt Rechte und Pflichten, die sich aus Normen ergeben</p>
+            <p class="pl-5">Bsp.: Wenn du kaufen Moped, dann musst du zahlen</p>
+            <h3 class="font-semibold sm:text-lg">4. Formelles Recht</h3>
+            <p class="pl-5">Die Regelungen die das Materielle Recht zur Umsetzung braucht</p>
+            <p class="pl-5">Bsp.: Wenn du Moped nix zahlen, dann hilft das Formelle Recht dem Rechtsinhaber das Geld zu bekommen</p>
+            <h3 class="font-semibold sm:text-lg">5. Völkerrecht</h3>
+            <p class="pl-5">Internationale Organisation</p>
+            <p class="pl-5">Bsp.: UNO</p>
+            <h3 class="font-semibold sm:text-lg">6. Innerstaatliches Recht</h3>
+            <p class="pl-5">Nur im Gebiet eines Staates</p>
+            <p class="pl-5">Bsp.: ABGB - Österreich vs BGB - Deutschland</p>
+        </div>
+        <div class="flex flex-col gap-1">
+            <h2 class="font-semibold text-lg sm:text-2xl">5. Rechtssubjekt - Rechtsobjekt</h2>
+            <p>Jeder Gegenstand der Teil eines Rechts oder einer Pflicht sein kann, ist ein Rechtsobjekt</p>
+            <p>Jeder der von Rechte betroffen sein kann, ist ein Rechtssubjekt</p>
+            <p><a class="font-semibold">Natürliche Personen</a> = alle Menschen</p>
+            <p><a class="font-semibold">Juristische Personen</a> = Vereine, Kapitalgesellschaften, Stiftungen, Fonds, Körperschaften des Öffentlichen Rechts</p>
+        </div>
+    </div>
+}
+@if(page() === 1){
+    <div id="chapter-2" class="flex flex-col gap-10 justify-start items-start w-full sm:px-60">
+        <h1 class="font-bold text-2xl sm:text-3xl tracking-wider self-center">Gerichtsorganisation</h1>
+        <span class="w-full h-1 bg-stone-100 rounded-xl"></span>
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">0. Allgemeines</h2>
+            <p>Gerichtsbarkeit bildet die 3. Säule des Rechtsstaats</p>
+            <p>Die Justiz unterliegt der Kompetenz des Bundes</p>
+            <p><a class="font-semibold">Strafgerichte</a> = Menschen vs. geschützte Rechtsgüter</p>
+            <p><a class="font-semibold">Zivilgerichte</a> = Streitigkeiten zwischen Bürger*innen</p>
+        </div>
+
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">1. Gerichtsbarkeit</h2>
+            <p>Durch eigene Bundesorgane: </p>
+            <p class="font-semibold">Ordentliche Gerichtsbarkeit</p>
+            <p class="font-semibold">Verwaltungs- und Verfassungsgerichtsbarkeit</p>
+            <p class="font-semibold">Spezialgerichten</p>
+            <p>Gerichte entscheiden durch zivilrechtliche Ansprüche und strafrechtliche Anklagen</p>
+            <p>Richter sind unabhängig, unabsetzbar, unversetzbar, unparteiisch und nur an der Rechtsordnung gebunden</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">1.1. Ordentliche Gerichtsbarkeit vs. Gerichte des öffentlichen Rechts</h2>
+            <p><a class="font-semibold">Ordentliche Gerichtsbarkeit</a>: Für Straf- und Zivilrecht</p>
+            <p>Bsp.: Oberster Gerichtshof, Oberlandesgerichte, Landesgerichte, Bezirksgerichte</p>
+            <p><a class="font-semibold">Gerichte des öffentlichen Rechts</a>: Für Verfassungs-, allgemeines Verwaltungs- und Steuerrecht</p>
+            <p>Bsp.: Verfassungsgerichtshof, Verwaltungsgerichtshof, Landesverwaltungsgerichte, Bundesverwaltungsgerichte, Bundesfinanzgericht</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">1.2. Vier Stufen des ordentlichen Gerichts</h2>
+            <p><a class="font-semibold">Oberster Gerichtshof</a>: Oberste Instanz in Zivil- und Strafrecht</p>
+            <p><a class="font-semibold">4 Oberlandsgerichte</a>: Rechtsmittelgerichte über Berufung gegen Urteile in Zivil- und Strafrecht</p>
+            <p><a class="font-semibold">20 Landesgerichte</a>: Erstinstanzliche Gerichte in Zivil- und Strafrecht (ned so wichtig)</p>
+            <p><a class="font-semibold">116 Bezirksgerichte</a>: Normale Gerichte halt</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">1.3. Bezirks vs. Landesgericht</h2>
+            <table>
+                <tr class="[&>td]:px-2 [&>td]:py-1 [&>td]:border [&>td]:border-white">
+                    <td class="font-semibold">Bezirksgericht</td>
+                    <td>Bis zu 15 000€</td>
+                    <td>Geldstrafen oder Freiheitsstrafen bis 1 Jahr</td>
+                    <td>Entscheiden als Einzelrichter*in</td>
+                    <td>Führen das Grundbuch</td>
+                    <td>Gerichtsvorsteher*in leitet</td>
+                </tr>
+                <tr class="[&>td]:px-2 [&>td]:py-1 [&>td]:border [&>td]:border-white">
+                    <td class="font-semibold">Landesgericht</td>
+                    <td>Keine Begrenzung</td>
+                    <td>Alles andere</td>
+                    <td>Großteils Einzelrichter, aber auch 3 (Senat) oder 3+8 Geschworene (Geschworenengericht) möglich</td>
+                    <td>Führen das Firmenbuch</td>
+                    <td>Präsident*in leitet</td>
+                </tr>
+            </table>
+        </div>
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">2. Grundsätze der Gerichtsbarkeit</h2>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">2.1. Richterliche Unabhängigkeit</h2>
+            <p>Die drei Säulen: </p>
+            <p><a class="font-semibold">Weisungsfreiheit</a></p>
+            <p><a class="font-semibold">Unabsetzbarkeit</a></p>
+            <p><a class="font-semibold">Unversetzbarkeit</a></p>
+            <p></p>
+            <p>Niemand darf seinem gesetzlichen Richter entzogen werden</p>
+            <p>Ernennung des Richters*in durch Bundespräsidenten</p>
+            <p>Justiz ist von der Verwaltung aller Instanzen getrennt</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">2.2. Anklageprinzip</h2>
+            <p>Funktion des Richters darf nicht funktion des Klägers sein</p>
+            <p>Strafrechtliche Verfolgung benötigt Anklagung => Ankläger = Staatsanwaltschaftliche Behörden, die den Weisungen des Bundesminister für Justiz unterstehen</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">2.3. Mitwirkung des Volkes an der Rechtsprechung</h2>
+            <p><a class="font-bold">Geschworene oder Schöffen*innen</a>, wiederspiegeln das Volk an der Rechtsprechung</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">3. Wirtschafts- und Korruptionsstaatsanwaltschaft (WKStA)</h2>
+            <p><a class="font-bold">Zentrale Staatsanwaltschaft zur Verrfolgung von Wirtschaftsstrafsachen und Korruption</a>: </p>
+            <p>WKStA ist für Amts- und Korruptionsdelikte und für Wirtschaftsstrafsachen mit Schaden > 5 Mio€</p>
+            <p><a class="font-bold">Whistleblower-Website</a>: Anonym schwere Wirtschaftskriminalität und Korruption melden</p>
+        </div>
+    </div>
+}
+@if(page() === 2){
+    <div id="chapter-3" class="flex flex-col gap-10 justify-start items-start w-full sm:px-60">
+        <h1 class="font-bold text-2xl sm:text-3xl tracking-wider self-center">Schuldrecht</h1>
+        <span class="w-full h-1 bg-stone-100 rounded-xl"></span>
+
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">1. Allgemeines</h2>
+            <p>Das Schuldrecht ist ein relatives Recht => Kann nur gegen den Vertragspartner durchgesetzt werden</p>
+            <p>Es wird zwischen Schuldner und Gläubiger unterschieden</p>
+            <p><a class="font-semibold">Schuldner*in</a>: Schuld einer Leistung gegenüber einem Gläubiger</p>
+            <p><a class="font-semibold">Gläubiger*in</a>: Recht auf eine Leistung des Schuldner</p>
+        </div>
+
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">2. Grundlagen des Vertragrechts</h2>
+            <p>Rechtsgeschäfte benötigen Willenserklärung</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">2.1. Einseitige Rechtsgeschäfte vs. Zwei- oder Mehrseitige Rechtsgeschäfte</h2>
+            <p><a class="font-semibold">Einseitige Rechtsgeschäfte</a>: Nur eine Person gibt eine Willenserklärung ab (Kündigung, Testament)</p>
+            <p><a class="font-semibold">Zwei- oder Mehrseitige Rechtsgeschäfte</a>: Mehrere Personen geben Willenserklärungen ab (Kaufvertrag, Mietvertrag)</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">2.2. Voraussetzungen für die Gültigkeit eines Vertrages</h2>
+            <p><a class="font-semibold">Geschäftsfähigkeit</a>: Eigenständlich rechtlich handeln können</p>
+            <p><a class="font-semibold">Übereinstimmende Willenserklärung</a>: Angebot und Annahme, Preis und Menge, muss gegeben sein</p>
+            <p><a class="font-semibold">Möglichkeit und Erlaubtheit</a>: Muss möglich sein und darf nicht verboten sein</p>
+            <p><a class="font-semibold">Einhaltung der Formvorschriften</a>: Grundsatz der Formfreiheit (mündlich, schriftlich, schlüssig), bestimmte benötigen Schriftform oder Mitwirkung von Notaren*innen oder Gerichte</p>
+            <p class="opacity-50"><a class="font-semibold">Abschlussfreiheit</a>: Recht, ob man den Vertrag annehmen möchte oder nicht</p>
+            <p class="opacity-50"><a class="font-semibold">Kontrahierungspflicht</a>: Gewisse juristische Personen, müssen mit üblichen Bedingungen mit jedem einen Vertrag eingehen. Sinn und Zweck ist die Existenzsicherung von Personen und Willkürschutz vor Monopolisten</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">2.3. Wie kommt ein Vertrag zustande?</h2>
+            <p>Eine übereinstimmende Willenserklärung von Angebot und Annahme ist ... möglich</p>
+            <p><a class="font-semibold">ausdrücklich</a>: Schriflich, Mündlich, Gebärden oder Gesten</p>
+            <p><a class="font-semibold">schlüssig</a>: Aus der handlung ersichtlich</p>
+            <p>Stillschweigend ist da nix möglich!</p>
+        </div>
+        <div class="flex flex-col gap-1 px-5 sm:px-20">
+            <h2 class="font-semibold text-lg sm:text-2xl">2.4. Nebenbestimmungen in Verträgen</h2>
+            <p><a class="font-semibold">Bedingung</a>: Recht wird von einem ungewissen Ereignis abhängig gemacht</p>
+            <p><a class="font-semibold">Befristung</a>: Ereignis wird 100% eintreten</p>
+            <p><a class="font-semibold">Auflage</a>: Der Begünstigte wird zu etwas gewzungen um das Recht zu bekommen</p>
+        </div>
+
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">3. Vertragserfüllung</h2>
+            <p>Kann über Tun oder Unterlassen erfolgen</p>
+
+            <p><a class="font-semibold">Erfüllungsort</a>: Wo</p>
+            <p><a class="font-semibold">Erfüllungszeit</a>: Wann, wenn nicht festgelegt, dann ist die Erfüllung jederzeit möglich</p>
+            <p><a class="font-semibold">Erfüllungsweise</a>: Wie, wenn nicht festgelegt => Geld gegen Ware</p>
+        </div>
+
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">4. Vertragsabsicherung</h2>
+            <p><a class="font-semibold">Vertragsstrafe</a>: Pauschalisierter Schadenersatz, wenn 1. Vertrag nicht erfüllt 2. Verzug oder 3. Schlechterfüllung</p>
+            <p><a class="font-semibold">Eigentumsvorbehalt</a>: Bis zur zahlund ist es Eigentum des käufers</p>
+            <p><a class="font-semibold">Pfandrecht</a>: Dient zur Besicherung von Rechtsgeschäften durch Übergabe von Wertsachen (???)</p>
+            <p><a class="font-semibold">Bürgschaft</a>: Ein Dritter verpflichtet sich für Schulden des Zweiten einzustehen</p>
+            <p><a class="font-semibold">Bankgarantie</a>: Verpflichtung eines Kreditinstitutes für den möglichen Schuldner einzustehen</p>
+        </div>
+
+        <div class="flex flex-col gap-1 px-5">
+            <h2 class="font-semibold text-lg sm:text-2xl">5. Leistungsstörungen</h2>
+            <p>Arten der Leistungsstörungen</p>
+            <p><a class="font-semibold">Mangelhafte Erfüllung</a>: Gewährleistung</p>
+            <p><a class="font-semibold">Verkürzung über mehr als 50% des wahren Wertes</a>: Etwas anderes</p>
+            <p><a class="font-semibold">Unmöglichkeit der Leistung</a>: Noch etwas anderes</p>
+            <p><a class="font-semibold">Verzug</a>: Noch mehr anderes</p>
+        </div>
+    </div>
+}
+</div> 

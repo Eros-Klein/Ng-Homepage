@@ -22,6 +22,11 @@ export class HomeComponent {
       routerLinkUrl: "/quiz",
       name: "Quiz Game",
       desc: "A simple quiz-home app, which lets you create and play Quizes!"
+    },
+    {
+      routerLinkUrl: "/recht",
+      name: "Recht",
+      desc: "A summary of the first semesters recht test (Austrian Law)"
     }])
   }
 }
